@@ -6,5 +6,5 @@ Slides & notes from the [CLEpy](http://clepy.org/) Module of the Month
 
 ### 2016
 
-- Dec: [Tweepy](Tweepy.ipynb)
-- Nov: [Arrow](Arrow.ipynb)
+- Dec: [Tweepy](Tweepy/Tweepy.ipynb)
+- Nov: [Arrow](Arrow/Arrow.ipynb)
