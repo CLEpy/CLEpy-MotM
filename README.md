@@ -16,7 +16,7 @@ yourself:
 
 Would you like to present a Module of the Month at CLEpy?
 
-See [CONTRIBUTING](CONTRIBUTING.md)
+See [CONTRIBUTING](CONTRIBUTING.md).
 
 ## Modules of the Month
 
