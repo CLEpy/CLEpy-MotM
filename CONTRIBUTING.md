@@ -5,6 +5,7 @@
 - Make a local clone of your fork.
 - Add a new directory named for the module you'd like to cover.
 - Store slides and example code in the directory.
+- If using a Jypyter notebook, be sure to click "Restart & Clear Output" under the "Kernel" menu before saving your notebook so old output is not stored.
 - Issue a pull request requesting that your module directory be merged.
 - Present at CLEpy!
     
