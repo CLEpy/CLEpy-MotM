@@ -22,6 +22,7 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ### 2017
 
+- Feb: [Boltons](Boltons/Boltons.ipynb)
 - Jan: [PyJWT](PyJWT/PyJWT.ipynb)
 
 ### 2016
