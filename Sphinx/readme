@@ -1,0 +1,24 @@
+Demo Steps
+
+create a new package or clone an existing one
+
+in the root of the package, run "sphinx-quickstart"
+- follow the prompts for the quickstart application
+- you may want to say yes to the following, they seem pretty slick
+  - auto-doc
+  - doctest
+  - viewcode
+  - githubpages
+
+Once the sphinx-quickstart is complete, it's time to run the automatic documentation tool sphinx-apidoc
+- ex: sphinx-apidoc -o source ../code
+
+When the sphinx-apidoc command finishes, link the modules.rst file it generated in the index.rst. Add any additional rst files to the index or and documentation you'ld like to write directly in index.rst.
+- under the toctree in index.rst add "source/modules"
+
+We're almost done, just a bit more to configure in conf.py
+- set "sphinx_rtd_theme" around line 92
+
+Run the makefile command to build the documentation
+- make html
+- open -a firefox _build/html/index.html
