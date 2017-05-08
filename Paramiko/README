@@ -1,0 +1,13 @@
+paramiko-motm.ipynb is a Jupyter/Rise presentation about the Paramiko Module
+
+here is how to run the presentation
+
+# if jupyter and rise are not already installed and configured
+$ pip install jupyter rise
+$ jupyter-nbextension install rise --py --sys-prefix
+$ jupyter-nbextension enable rise --py --sys-prefix
+
+$ cd path/to/paramiko-motm.ipynb
+$ jupyter notebook
+
+The notebook should be available in the jupyter notebook HOME
