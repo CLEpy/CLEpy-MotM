@@ -22,6 +22,7 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ### 2017
 
+- Aug: [Pandas](Pandas/Pandas-motm.ipynb)
 - Jun: [Pip-Tools](Pip-Tools/Pip-Tools.ipynb)
 - May: [Paramiko](Paramiko/paramiko-motm.ipynb)
 - Apr: [Sphinx](Sphinx/sphinx.ipynb)
