@@ -22,6 +22,7 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ### 2017
 
+- Oct: [Tox](Tox/Tox.ipynb)
 - Sep: [PyQuery](PyQuery/PyQuery-MotM.ipynb)
 - Aug: [Pandas](Pandas/Pandas-motm.ipynb)
 - Jun: [Pip-Tools](Pip-Tools/Pip-Tools.ipynb)
