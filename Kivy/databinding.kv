@@ -1,0 +1,12 @@
+#:kivy 1.9
+
+BoxLayout:
+  orientation: 'vertical'
+
+  Label:
+    text: "{0:.2f}".format(slider.value)
+
+  Slider:
+    id: slider
+    min: 1
+    max: 100
