@@ -20,8 +20,13 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ## Modules of the Month
 
+### 2018
+
+- Jan: ?
+
 ### 2017
 
+- Dec: [FuzzyWuzzy](FuzzyWuzzy/FuzzyWuzzy.ipynb)
 - Nov: [Kivy](Kivy/Kivy.ipynb)
 - Oct: [Tox](Tox/Tox.ipynb)
 - Sep: [PyQuery](PyQuery/PyQuery-MotM.ipynb)
