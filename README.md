@@ -22,7 +22,7 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ### 2018
 
-- Jan: ?
+- Jan: [Retry](Retry/Retry.ipynb)
 
 ### 2017
 
