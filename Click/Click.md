@@ -45,7 +45,7 @@ Examples
 - Commands: [commands.py](commands.py)
   - Sub-commands
   - [More on commands](http://click.pocoo.org/latest/commands/)
-- Utilities:
+- Utilities: [utilities.py](utilities.py):
   - Colors
   - Progress bars
   - Screen clearing
