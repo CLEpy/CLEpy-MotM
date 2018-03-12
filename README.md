@@ -22,6 +22,7 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ### 2018
 
+- Feb: [Pelican](Pelican/Pelican.md)
 - Jan: [Retry](Retry/Retry.ipynb)
 
 ### 2017
