@@ -5,11 +5,14 @@ RISE
 # For MotMs:
 Arrow
 Boltons
+Click
+ colorama
 Fire
 FuzzyWuzzy
 #Kivy
 Pandas
 Paramiko
+Pelican
 Pip-Tools
 PyJWT
 PyQuery
