@@ -67,3 +67,12 @@ class OrderTest(TestCase):
 
         with self.assertRaises(TransitionNotAllowed):
             order.receive_return()
+
+    def test_revenue(self):
+        order = Order.objects.create(customer="Luke S.",
+                                     address="1 main street",
+                                     item="blue lightsaber",
+                                     price=250)
+        self.assertEqual(order.revenue, 250)
+        order.cancel()
+        self.assertEqual(order.revenue, 0)

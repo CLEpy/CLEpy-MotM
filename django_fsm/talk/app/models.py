@@ -14,7 +14,11 @@ class Order(models.Model):
     item = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=9, decimal_places=2)
 
-    state = FSMField(default="ordered")
+    STATE_CHOICES = (("ordered", "Ordered", "Order"),
+                     ("shipped", "Shipped", "Order"),
+                     ("returned", "Returned", "CancelledOrder"),
+                     ("cancelled", "Cancelled", "CancelledOrder"))
+    state = FSMField(default="ordered", state_choices=STATE_CHOICES)
 
     def refund(self):
         # return the money
@@ -39,7 +43,13 @@ class Order(models.Model):
 
     @property
     def revenue(self):
-        if self.state in ('cancelled', 'returned'):
-            return 0
-        else:
-            return self.price
+        return self.price
+
+
+class CancelledOrder(Order):
+    class Meta:
+        proxy = True
+
+    @property
+    def revenue(self):
+        return 0
