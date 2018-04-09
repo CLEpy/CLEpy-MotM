@@ -25,14 +25,12 @@ class Order(models.Model):
         # send notification email
         pass
 
-    @transition(field=state, source="shipped", target="returned")
-    def receive_return(self):
-        # some users are abusing returns!
-        if self.customer in BLACKLIST:
-            raise ValidationError("You've been blacklisted from returns!")
-        if self.price > 200:
-            raise ValidationError("We're not accepting returns over 200 anymore.")
+    def not_too_expensive_for_return(self):
+        return self.price <= 200
 
+    @transition(field=state, source="shipped", target="returned", conditions=[not_too_expensive_for_return],
+                permission=lambda instance, user: user not in BLACKLIST)
+    def receive_return(self):
         self.refund()
 
     @transition(field=state, source="ordered", target="cancelled")

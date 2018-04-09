@@ -5,7 +5,7 @@ from django.core.exceptions import ValidationError
 from django.test import TestCase
 
 # Create your tests here.
-from django_fsm import TransitionNotAllowed
+from django_fsm import TransitionNotAllowed, has_transition_perm
 
 from .models import Order
 
@@ -54,8 +54,7 @@ class OrderTest(TestCase):
         order.ship()
         order.save()
 
-        with self.assertRaises(ValidationError):
-            order.receive_return()
+        self.assertFalse(has_transition_perm(order.receive_return, order.customer))
 
     def test_expensive_return(self):
         order = Order.objects.create(customer="Luke S.",
@@ -66,5 +65,5 @@ class OrderTest(TestCase):
         order.ship()
         order.save()
 
-        with self.assertRaises(ValidationError):
+        with self.assertRaises(TransitionNotAllowed):
             order.receive_return()
