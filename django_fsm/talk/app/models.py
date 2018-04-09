@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.core.exceptions import ValidationError
+
 from django.db import models
+from django_fsm import FSMField, transition
 
 
 class Order(models.Model):
@@ -11,21 +12,21 @@ class Order(models.Model):
     item = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=9, decimal_places=2)
 
-    # Customers should be able to cancel their order, duh!
-    is_cancelled = models.BooleanField(default=False)
-
-    # We've been taken for $100k in cancellation fraud, oops
-    is_shipped = models.BooleanField(default=False)
-    is_returned = models.BooleanField(default=False)
+    state = FSMField(default="ordered")
 
     def refund(self):
         # return the money
         pass
 
+    @transition(field=state, source="ordered", target="shipped")
+    def ship(self):
+        # send notification email
+        pass
+
+    @transition(field=state, source="shipped", target="returned")
+    def receive_return(self):
+        self.refund()
+
+    @transition(field=state, source="ordered", target="cancelled")
     def cancel(self):
-        if not self.is_shipped or self.is_returned:
-            self.refund()
-            self.is_cancelled = True
-            self.save()
-        else:
-            raise ValidationError("FRAUD! ABORT!")
+        self.refund()

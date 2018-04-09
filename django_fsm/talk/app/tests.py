@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.core.exceptions import ValidationError
 from django.test import TestCase
 
 # Create your tests here.
+from django_fsm import TransitionNotAllowed
+
 from .models import Order
 
 
@@ -13,31 +14,32 @@ class OrderTest(TestCase):
         order = Order.objects.create(customer="Returny Customer",
                                      address="1 main street",
                                      item="blue lightsaber",
-                                     price=100,
-                                     is_cancelled=False,
-                                     is_shipped=True,
-                                     is_returned=True)
-        order.cancel()
-        self.assertTrue(order.is_cancelled)
+                                     price=100)
+        order.ship()
+        order.save()
+        self.assertEqual(order.state, "shipped")
+
+        order.receive_return()
+        order.save()
+        self.assertEqual(order.state, "returned")
 
     def test_lawful_cancellation(self):
         order = Order.objects.create(customer="Cancelly Customer",
                                      address="1 main street",
                                      item="blue lightsaber",
-                                     price=100,
-                                     is_cancelled=False,
-                                     is_shipped=False,
-                                     is_returned=False)
+                                     price=100)
         order.cancel()
-        self.assertTrue(order.is_cancelled)
+        order.save()
+        self.assertEqual(order.state, "cancelled")
 
     def test_fraudster(self):
         order = Order.objects.create(customer="Fraudy McFraudstein",
                                      address="1 main street",
                                      item="blue lightsaber",
-                                     price=100,
-                                     is_cancelled=False,
-                                     is_shipped=True,
-                                     is_returned=False)
-        with self.assertRaises(ValidationError):
+                                     price=100)
+
+        order.ship()
+        order.save()
+
+        with self.assertRaises(TransitionNotAllowed):
             order.cancel()
