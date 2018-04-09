@@ -36,3 +36,10 @@ class Order(models.Model):
     @transition(field=state, source="ordered", target="cancelled")
     def cancel(self):
         self.refund()
+
+    @property
+    def revenue(self):
+        if self.state in ('cancelled', 'returned'):
+            return 0
+        else:
+            return self.price
