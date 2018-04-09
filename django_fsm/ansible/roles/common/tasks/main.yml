@@ -1,0 +1,11 @@
+---
+# first let's get all the software we need to download packages
+- name: Updating repository and installed packages
+  apt: update_cache=yes
+- name: ensure git is at the latest version
+  apt: pkg=git state=latest
+- name: Ensuring pip is installed
+  apt: pkg=python-pip state=latest
+# now let's setup the keys
+- name: Ensure locale is en_US.UTF-8
+  locale_gen: name=en_US.UTF-8 state=present

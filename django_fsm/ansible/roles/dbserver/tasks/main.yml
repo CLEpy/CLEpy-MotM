@@ -1,0 +1,20 @@
+---
+# Creating postgresql database & user
+- name: ensure postgresql is at the latest version
+  apt: pkg=postgresql state=latest
+- name: Install libpq
+  apt: name=libpq-dev state=latest
+- name: Install python Dev
+  apt: name=python-dev state=latest
+- name: Ensuring psycopg2 is installed
+  pip: name=psycopg2 state=latest
+- name: Creating postgresql database
+  sudo: yes
+  sudo_user: postgres
+  postgresql_db: name=ClePyDB state=present
+- name: Creating postgresql user
+  sudo: yes
+  sudo_user: postgres
+  postgresql_user: db=ClePyDB name=clepydb-admin password='password' role_attr_flags=SUPERUSER state=present
+- name: Postgres is restarted
+  service: name=postgresql state=restarted

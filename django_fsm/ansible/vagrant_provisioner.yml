@@ -1,0 +1,18 @@
+---
+- hosts: all
+  user: vagrant
+  become: true
+  roles:
+    - common
+
+- hosts: dbservers
+  user: vagrant
+  become: true
+  roles:
+    - dbserver
+
+- hosts: appservers
+  user: vagrant
+  become: true
+  roles:
+    - appserver

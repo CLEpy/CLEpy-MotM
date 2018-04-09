@@ -1,0 +1,46 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+
+Vagrant.configure(2) do |config|
+    config.vm.box = "ubuntu/trusty32"
+    config.vm.provider "virtualbox" do |v|
+        v.memory = 1024
+        v.cpus = 2
+    end
+    
+    vagrant_ip = "192.168.33.33"
+    config.vm.network "private_network", ip: vagrant_ip
+    
+    config.vm.synced_folder "./", "/opt/talk", id: "vagrant-root",
+	    # owner: "vagrant",
+	    # group: "www-data",
+	    # mount_options: ["dmode=775,fmode=774"],
+        type: "nfs"
+
+    # Make LC_ALL default to en_US.UTF-8 instead of en_US.
+    # See: https://github.com/mitchellh/vagrant/issues/1188
+	config.vm.provision "shell", inline: 'echo \'LC_ALL="en_US.UTF-8"\' > /etc/default/locale'
+    
+    ansible_groups = {
+      "dbservers" => ["default"],
+      "appservers" => ["default"],
+    }
+
+    ansible_extra_vars = {
+      vm_ip: vagrant_ip,
+    }
+
+    ansible_playbook = "ansible/vagrant_provisioner.yml"
+
+    config.vm.provision "ansible" do |ansible|
+		ansible.groups = ansible_groups
+        ansible.playbook = ansible_playbook
+        ansible.extra_vars = ansible_extra_vars
+    end
+
+end
