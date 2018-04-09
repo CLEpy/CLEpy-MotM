@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from django.core.exceptions import ValidationError
 from django.test import TestCase
 
 # Create your tests here.
@@ -43,3 +44,27 @@ class OrderTest(TestCase):
 
         with self.assertRaises(TransitionNotAllowed):
             order.cancel()
+
+    def test_blacklisted_return(self):
+        order = Order.objects.create(customer="Abusive Returner",
+                                     address="1 main street",
+                                     item="blue lightsaber",
+                                     price=100)
+
+        order.ship()
+        order.save()
+
+        with self.assertRaises(ValidationError):
+            order.receive_return()
+
+    def test_expensive_return(self):
+        order = Order.objects.create(customer="Luke S.",
+                                     address="1 main street",
+                                     item="blue lightsaber",
+                                     price=250)
+
+        order.ship()
+        order.save()
+
+        with self.assertRaises(ValidationError):
+            order.receive_return()
