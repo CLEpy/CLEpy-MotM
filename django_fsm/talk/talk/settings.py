@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_fsm',
-    'app'
+    'app',
+    'django_fsm_log'
 ]
 
 MIDDLEWARE = [
