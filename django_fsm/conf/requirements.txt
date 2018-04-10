@@ -1,0 +1,4 @@
+Django==1.11.12
+django-fsm==2.6.0
+django-fsm-log==1.5.0
+graphviz==0.8.2

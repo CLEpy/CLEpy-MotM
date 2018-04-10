@@ -1,0 +1,14 @@
+digraph {
+	subgraph cluster_app_Order_state {
+		graph [label="app.Order.state"]
+		"app.order.state.cancelled" [label=cancelled shape=doublecircle]
+		"app.order.state.returned" [label=returned shape=doublecircle]
+		"app.order.state.ordered" [label=ordered shape=circle]
+		"app.order.state._initial" [label="" shape=point]
+		"app.order.state._initial" -> "app.order.state.ordered"
+		"app.order.state.shipped" [label=shipped shape=circle]
+		"app.order.state.ordered" -> "app.order.state.shipped" [label=ship]
+		"app.order.state.ordered" -> "app.order.state.cancelled" [label=cancel]
+		"app.order.state.shipped" -> "app.order.state.returned" [label=receive_return]
+	}
+}

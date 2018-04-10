@@ -1,0 +1,12 @@
+---
+- name: Install graphviz on dev environment to see the state machine
+  apt: pkg=graphviz state=latest
+- name: Install dependencies
+  apt: pkg={{ item }} state=latest force=yes
+  with_items:
+    - libxslt-dev
+    - libxml2-dev
+    - libjpeg-dev
+    - make
+- name: Install site requirements
+  pip: requirements=/opt/talk/conf/requirements.txt
