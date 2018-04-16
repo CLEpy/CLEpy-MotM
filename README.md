@@ -22,6 +22,7 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ### 2018
 
+- Apr: [django_fsm](django_fsm/)
 - Mar: [Click](Click/Click.md)
 - Feb: [Pelican](Pelican/Pelican.md)
 - Jan: [Retry](Retry/Retry.ipynb)
