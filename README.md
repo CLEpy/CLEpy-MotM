@@ -22,6 +22,7 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ### 2018
 
+- Sep: [pydoc](pydoc/)
 - Apr: [django_fsm](django_fsm/)
 - Mar: [Click](Click/Click.md)
 - Feb: [Pelican](Pelican/Pelican.md)
