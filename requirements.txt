@@ -9,7 +9,7 @@ arrow==0.12.0
 asn1crypto==0.23.0        # via cryptography
 babel==2.5.1              # via sphinx
 bcrypt==3.1.4             # via paramiko
-bleach==2.1.2             # via nbconvert
+bleach==2.1.4             # via nbconvert
 blinker==1.4              # via pelican
 boltons==17.1.0
 certifi==2017.11.5        # via requests
