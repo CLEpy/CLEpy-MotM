@@ -50,7 +50,7 @@ numpy==1.13.3             # via pandas
 oauthlib==2.0.6           # via requests-oauthlib
 pandas==0.21.0
 pandocfilters==1.4.2      # via nbconvert
-paramiko==2.4.0
+paramiko==2.4.1
 parso==0.1.0              # via jedi
 pelican==3.7.1
 pexpect==4.3.0            # via ipython
