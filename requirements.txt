@@ -45,7 +45,7 @@ markupsafe==1.0           # via jinja2
 mistune==0.8.3            # via nbconvert
 nbconvert==5.3.1          # via jupyter, notebook
 nbformat==4.4.0           # via ipywidgets, nbconvert, notebook
-notebook==5.2.2           # via jupyter, rise, widgetsnbextension
+notebook==5.4.1           # via jupyter, rise, widgetsnbextension
 numpy==1.13.3             # via pandas
 oauthlib==2.0.6           # via requests-oauthlib
 pandas==0.21.0
