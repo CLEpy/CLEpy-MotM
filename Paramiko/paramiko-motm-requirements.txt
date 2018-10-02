@@ -9,7 +9,7 @@ cffi==1.10.0              # via cryptography
 cryptography==1.8.1       # via paramiko
 idna==2.5                 # via cryptography
 packaging==16.8           # via cryptography
-paramiko==2.1.2
+paramiko==2.4.1
 pyasn1==0.2.3             # via paramiko
 pycparser==2.17           # via cffi
 pyparsing==2.2.0          # via packaging
