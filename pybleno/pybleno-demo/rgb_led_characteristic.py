@@ -30,8 +30,8 @@ class RgbLedCharacteristic(Characteristic):
         else:
             data = array.array('B', [0] * 3)
             writeUInt8(data, self.r, 0)
-            writeUInt8(data, self.g, 0)
-            writeUInt8(data, self.b, 0)
+            writeUInt8(data, self.g, 1)
+            writeUInt8(data, self.b, 2)
             callback(Characteristic.RESULT_SUCCESS, data);
 
     def onWriteRequest(self, data, offset, withoutResponse, callback):
