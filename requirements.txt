@@ -71,7 +71,7 @@ pytz==2017.3              # via babel, feedgenerator, pandas, pelican
 pyzmq==16.0.3             # via jupyter-client
 qtconsole==4.3.1          # via jupyter
 requests-oauthlib==0.8.0  # via tweepy
-requests==2.19.1          # via requests-oauthlib, sphinx, tweepy
+requests==2.21.0          # via requests-oauthlib, sphinx, tweepy
 rise==5.1.0
 simplegeneric==0.8.1      # via ipython
 six==1.11.0               # via bcrypt, bleach, cryptography, feedgenerator, fire, html5lib, pelican, pip-tools, prompt-toolkit, pynacl, python-dateutil, sphinx, tox, traitlets, tweepy
