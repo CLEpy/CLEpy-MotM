@@ -28,7 +28,7 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 ### 2018
 
 - Dec:
-- Nov: Pybleno
+- Nov: [Pybleno](pybleno/)
 - Oct: [Django](Django/)
 - Sep: [pydoc](pydoc/)
 - Apr: [django_fsm](django_fsm/)
