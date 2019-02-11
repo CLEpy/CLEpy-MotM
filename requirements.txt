@@ -85,7 +85,7 @@ tox==2.9.1
 traitlets==4.3.2          # via ipykernel, ipython, ipywidgets, jupyter-client, jupyter-core, nbconvert, nbformat, notebook, qtconsole
 tweepy==3.5.0
 unidecode==1.0.22         # via pelican
-urllib3==1.22             # via requests
+urllib3==1.24.1             # via requests
 virtualenv==15.1.0        # via tox
 wcwidth==0.1.7            # via prompt-toolkit
 webencodings==0.5.1       # via html5lib
