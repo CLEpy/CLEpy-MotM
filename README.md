@@ -20,8 +20,15 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ## Modules of the Month
 
+### 2019
+
+- Feb: [Tenacity](Tenacity/)
+- Jan: Locust
+
 ### 2018
 
+- Dec:
+- Nov: Pybleno
 - Oct: [Django](Django/)
 - Sep: [pydoc](pydoc/)
 - Apr: [django_fsm](django_fsm/)
