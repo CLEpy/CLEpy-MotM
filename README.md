@@ -22,6 +22,8 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ### 2019
 
+- Jul: nbconvert
+- Apr: Bokeh
 - Feb: [Tenacity](Tenacity/)
 - Jan: Locust
 
