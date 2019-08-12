@@ -1,21 +1,22 @@
 # For Presentations
 jupyter
-RISE
+rise
 
 # For MotMs:
-Arrow
-Boltons
-Click
- colorama
-Fire
-FuzzyWuzzy
-#Kivy
-Pandas
-Paramiko
-Pelican
-Pip-Tools
-PyJWT
-PyQuery
-Sphinx
-Tox
-Tweepy
+arrow
+boltons
+click
+colorama
+fire
+fuzzywuzzy
+plotnine
+# kivy
+pandas
+paramiko
+pelican
+pip-tools
+pyjwt
+pyquery
+sphinx
+tox
+tweepy

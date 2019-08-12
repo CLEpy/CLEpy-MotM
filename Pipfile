@@ -1,12 +1,9 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [packages]
-
 jupyter = "*"
 rise = "*"
 arrow = "*"
@@ -24,11 +21,9 @@ Sphinx = "*"
 tox = "*"
 tweepy = "*"
 colorama = "*"
-
+plotnine = "*"
 
 [dev-packages]
-
-
 
 [requires]
 
