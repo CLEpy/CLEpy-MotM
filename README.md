@@ -22,6 +22,7 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ### 2019
 
+- Aug: [Plotnine](Plotnine/)
 - Feb: [Tenacity](Tenacity/)
 - Jan: Locust
 - Aug: [Plotnine](Plotnine/)
