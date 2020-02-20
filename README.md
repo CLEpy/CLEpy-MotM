@@ -22,10 +22,13 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ### 2019
 
-- Jul: nbconvert
-- Apr: Bokeh
+- Dec: [Connexion](Connexion/)
+- Aug: [Plotnine](Plotnine/)
+- Jul: [nbconvert](nbconvert/)
+- Apr: [Bokeh](Bokeh/)
 - Feb: [Tenacity](Tenacity/)
 - Jan: Locust
+
 
 ### 2018
 
