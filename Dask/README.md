@@ -3,6 +3,7 @@
 ## Resources
 
 [Where can I learn about Dask?](https://docs.dask.org/en/latest)
+
 [Does Dask support GPU-accelerated matrix multiplication?](https://docs.dask.org/en/latest/gpu.html)
 
 ## Using the resources in this directory
