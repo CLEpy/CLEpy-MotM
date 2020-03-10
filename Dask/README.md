@@ -8,8 +8,11 @@
 
 ## Using the resources in this directory
 
-1. Create and activate a virtual environment
-  - With your virtual environment activated, pip install the packages listed in requirements.txt
+1. Create and activate a virtual environment, then pip install:
+  - jupyter
+  - pandas
+  - "dask[dataframe]" or "dask[complete]"
+  - pyarrow
 
 1. Because the data files are in the 1GB range, they are not stored on GitHub
   - You can recreate the demo data locally with make-demo-data.ipynb
