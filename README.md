@@ -20,6 +20,10 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ## Modules of the Month
 
+### 2020
+
+- March: [Dask](Dask/)
+
 ### 2019
 
 - Dec: [Connexion](Connexion/)
