@@ -1,0 +1,22 @@
+graph TD
+    user-->sftp
+    subgraph  AWS Transfer Family
+    sftp-->sftpS3bucket[SFTP's S3 Bucket]
+    end
+    subgraph Channels AWS Account
+    sftpS3bucket-->|Triggered by file created event|lambda[Lambda Function]
+    lambda-->blfs3[BLF processor S3 bucket]
+    blfs3-->|publishes message when file saved to s3|sns[BLF Uploaded SNS Topic]
+    end
+    api[K8s API Pod]-->|subscribes to file saved topic|sns
+    api-->islock{Check redis for job lock}-->|yes? - log and quit|redis
+    islock-->|no? Create lock in Redis and continue|redis[(Redis)]
+    subgraph AWS K8s Account
+    api-->|create new job after redis check|k8sjob
+    blfs3--->|Download file|k8sjob[K8s Job to Complete ETL]
+    end
+    k8sjob-->es[(Elasticsearch Cluster)]
+    
+
+    
+
