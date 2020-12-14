@@ -22,7 +22,8 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ### 2020
 
-- March: [Dask](Dask/)
+- Dec: [HTTPX](HTTPX/)
+- Mar: [Dask](Dask/)
 
 ### 2019
 
@@ -33,10 +34,8 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 - Feb: [Tenacity](Tenacity/)
 - Jan: Locust
 
-
 ### 2018
 
-- Dec:
 - Nov: [Pybleno](pybleno/)
 - Oct: [Django](Django/)
 - Sep: [pydoc](pydoc/)
