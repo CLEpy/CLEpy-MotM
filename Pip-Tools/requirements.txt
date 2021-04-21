@@ -10,5 +10,5 @@ flask==1.0.2
 itsdangerous==0.24        # via flask
 jinja2==2.10.3            # via flask
 markupsafe==1.0           # via jinja2
-sqlalchemy==1.1.10        # via flask-sqlalchemy
+sqlalchemy==1.4.10        # via flask-sqlalchemy
 werkzeug==0.15.3          # via flask
