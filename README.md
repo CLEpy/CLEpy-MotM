@@ -20,6 +20,10 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ## Modules of the Month
 
+### 2021
+
+- Jul: [tqdm](tqdm/)
+
 ### 2020
 
 - Dec: [HTTPX](HTTPX/)
