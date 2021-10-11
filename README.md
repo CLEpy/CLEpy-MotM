@@ -23,6 +23,7 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 ### 2021
 
 - Jul: [tqdm](tqdm/)
+- Oct: [aiosql](aiosql/)
 
 ### 2020
 
