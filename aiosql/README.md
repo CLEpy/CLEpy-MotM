@@ -1,0 +1,7 @@
+# [aiosql](https://nackjicholson.github.io/aiosql/)
+
+_SQL is code. Write it, version control it, comment it, and run it using files_
+
+Tag line from documentation:
+
+> Writing your SQL code in Python programs as strings doesn't allow you to easily reuse them in SQL GUIs or CLI tools like psql. With aiosql you can organize your SQL statements in .sql files, load them into your python application as methods to call without losing the ability to use them as you would any other SQL file.
