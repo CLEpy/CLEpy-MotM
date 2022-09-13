@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "streamlit-motm"
+version = "0.1.0"
+description = "Module of the Month: Streamlit"
+authors = ["Nick Muoh <nickspirit3+github@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.12.2"
+igviz = "^0.4.0"
+
+
+[tool.poetry.group.dev.dependencies]
+watchdog = "^2.1.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
