@@ -1,4 +1,4 @@
-Django==2.2.4
+Django==4.2.2
 django-fsm==2.6.0
 django-fsm-log==1.5.0
 graphviz==0.8.2
