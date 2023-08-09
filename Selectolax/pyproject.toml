@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "selectolax-"
+version = "0.1.0"
+description = ""
+authors = ["Calvin Forbes <calvinscottforbes@gmail.com>"]
+readme = "README.md"
+packages = [{include = "selectolax_"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selectolax = "^0.3.12"
+ipykernel = "^6.21.1"
+requests = "^2.28.2"
+bs4 = "^0.0.1"
+parsel = "^1.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
