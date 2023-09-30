@@ -6,7 +6,7 @@
 #
 click==6.7                # via flask
 flask-sqlalchemy==2.2
-flask==1.0.2
+flask==3.0.0
 itsdangerous==0.24        # via flask
 jinja2==2.10.3            # via flask
 markupsafe==1.0           # via jinja2
