@@ -7,7 +7,7 @@
 asn1crypto==0.22.0        # via cryptography
 bcrypt==3.1.7             # via paramiko
 cffi==1.10.0              # via bcrypt, cryptography, pynacl
-cryptography==1.8.1       # via paramiko
+cryptography==42.0.8       # via paramiko
 idna==2.5                 # via cryptography
 packaging==16.8           # via cryptography
 paramiko==2.4.2
